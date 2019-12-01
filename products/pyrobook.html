@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>CodeFire - Pyrobook</title>
+	<link href="../style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <div align="center">
+	  <h1>PyroBook</h1>
+	  <h2>An affordable (finally!) laptop</h2>
+  </div>
+	<br>
+    <img src="../pics/lap.png" />
+    <p>The PyroBook is an affordable laptop run on a Raspberry Pi 4. The PyroBook has an HDMI port, 2 USB ports, Internet and Bluetooth support, and an easy-to-use desktop. Comes with a tough case, so it's a good choice for first-time laptop users or clumsy folks. They come in black and white.</p>
+    <p class="price">$40-$60</p>
+    <h2>Price Selection:</h2>
+    <select id="price">
+      <option value="40">$40</option>
+      <option value="50">$50</option>
+      <option value="60">$60</option>
+    </select>
+    <br>
+    <h2>Color Selection:</h2>
+    <select id="color">
+      <option value="white">White</option>
+      <option value="black">Black</option>
+    </select>
+    <h2>Address in form STREET, CITY, STATE, ZIPCODE</h2>
+    <input type="text" id="addr">
+    <script>
+      function mailit(){
+        var p = document.getElementById("price");
+        var c = document.getElementById("color");
+        var price = p.options[p.selectedIndex].value;
+        var color = c.options[c.selectedIndex].value;
+        var a = document.getElementById("addr").value;
+        window.open(`mailto:codeforhire3@gmail.com?subject=Purchase Pyrobook&body=I would like to buy a ${color} $${price} PyroBook. Deliver to ${a}`);
+      }
+    </script>
+    <h2>
+      <p>Buy Now!</p>
+      <img src="../pics/lap.png" onclick="mailit()"/>
+    </h2>
+
+  </body>
+
+</html>
