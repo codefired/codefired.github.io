@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css?family=Solway:500&display=swap');
+.centerimg{
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.centertxt{
+  margin-left: auto;
+  margin-right: auto;
+  width: 15em;
+}
+#logo {
+  width: 350px;
+  height: 200px;
+}
+body {
+  background-color: aquamarine;
+  font-family: 'Solway', serif;
+}
+img{
+  width: 20%;
+  height: 42%;
+}
+p.price::before {
+  content: "Price: ";
+}
+p.price {
+  font-weight: bold;
+  font-size: 40px;
+}
