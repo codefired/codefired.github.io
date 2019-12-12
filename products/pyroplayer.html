@@ -12,5 +12,16 @@
       <p>Music on the go.</p>
     </div>
     <p>The Pyroplayer is a simple music player that only costs $12 to buy. You can upload music by MicroSD card (comes with a 32GB one)</p>
+    <input type="text" id="addr">
+    <script>
+      function mailit(){
+        var a = document.getElementById("addr").value;
+        window.open(`mailto:codeforhire3@gmail.com?subject=Purchase PyroPlayer&body=I would like to buy a Pyroplayer. Deliver to ${a}`);
+      }
+    </script>
+    <h2>
+      <p>Buy Now!</p>
+      <img src="../pics/lap.png" onclick="mailit()"/>
+    </h2>
   </body>
 </html>
